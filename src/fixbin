@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "chmod +x $HOME/bin/\*"
+chmod +x $HOME/bin/*
