@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+VAGRANT_ROOT_DIR=$HOME/Vagrant
+VAGRANT_DIR=$VAGRANT_ROOT_DIR/docker
+
+cd $VAGRANT_DIR
+vagrant up
