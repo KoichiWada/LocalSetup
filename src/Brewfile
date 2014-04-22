@@ -9,7 +9,7 @@ install brew-cask || true
 # Packages
 install jq || true
 install dnsmasq || true
-install composer || true
+#install composer || true
 # Cask Packages
 cask install iterm2 || true
 cask install alfred || true
