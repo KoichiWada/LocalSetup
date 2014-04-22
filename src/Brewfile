@@ -4,6 +4,8 @@ tap phinze/homebrew-cask || true
 tap homebrew/binary || true
 # Brew Update
 update || true
+# Brew Upgrade
+#upgrade || true
 # Brew Cask
 install brew-cask || true
 # Packages
@@ -23,3 +25,7 @@ cask install google-chrome || true
 cask install virtualbox || true
 cask install vagrant || true
 cask install eclipse-ide || true
+#
+cask alfred link
+#
+cleanup
