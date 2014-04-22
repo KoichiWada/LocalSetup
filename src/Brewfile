@@ -1,0 +1,25 @@
+# Add Repository
+tap homebrew/versions || true
+tap phinze/homebrew-cask || true
+tap homebrew/binary || true
+# Brew Update
+update || true
+# Brew Cask
+install brew-cask || true
+# Packages
+install jq || true
+install dnsmasq || true
+install composer || true
+# Cask Packages
+cask install iterm2 || true
+cask install alfred || true
+cask install evernote || true
+cask install dropbox || true
+cask install skype || true
+cask install mysqlworkbench || true
+cask install sequel-pro || true
+cask install firefox || true
+cask install google-chrome || true
+cask install virtualbox || true
+cask install vagrant || true
+cask install eclipse-ide || true
