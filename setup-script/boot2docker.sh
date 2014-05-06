@@ -11,7 +11,7 @@ DEST_PATH=$INSTALL_DIR/$TARGET_NAME
 if [ -f $DEST_PATH ]; then
     echo "'$DEST_PATH' exists."
 else
-    curl https://raw.github.com/boot2docker/boot2docker/master/boot2docker > $DEST_PATH
+    curl -fsSL https://raw.github.com/boot2docker/boot2docker/master/boot2docker > $DEST_PATH
     chmod +x $DEST_PATH
     echo "'$DEST_PATH' has been installed."
 fi
