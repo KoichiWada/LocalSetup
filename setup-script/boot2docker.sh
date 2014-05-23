@@ -15,3 +15,5 @@ else
     chmod +x $DEST_PATH
     echo "'$DEST_PATH' has been installed."
 fi
+
+$SETUP_SCRIPT_DIR/virtualbox-portforwarding.sh 49000 49900
