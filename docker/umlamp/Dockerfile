@@ -13,7 +13,7 @@ RUN apt-get install -y git
 RUN apt-get install -y monit
 RUN apt-get install -y openssh-server openssh-client
 RUN apt-get install -y apache2
-RUN apt-get install -y mysql-server
+RUN apt-get install -y mysql-server mysql-client
 RUN apt-get install -y php5 php5-curl libapache2-mod-php5 php5-mysql phpmyadmin phpunit
 
 RUN apt-get clean
