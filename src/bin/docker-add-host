@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+if [ $# -lt 1 ]; then
+    echo Usage: $(basename $0) NAME
+    exit 1
+fi
+
+NAME=$1
+IP=$(boot2docker ip 2>/dev/null)
+
+entry=$(grep $NAME /etc/hosts)
+if [ $? -eq 0 ]; then
+    echo "$NAME exists"
+    echo $entry
+    exit 2
+fi
+
+echo "Backing up /etc/hosts..."
+sudo cp /etc/hosts /etc/hosts.$(date "+%Y%m%d%H%M%S")
+
+echo "Adding '$IP $NAME' to /etc/hosts..."
+sudo sh -c "echo '$IP  $NAME' >> /etc/hosts"
+
+echo "Done."
