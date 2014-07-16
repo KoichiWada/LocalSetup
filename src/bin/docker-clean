@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+idlist=$(docker ps -aq)
+if [ -n "$idlist" ]; then
+   docker rm $idlist
+fi
+
