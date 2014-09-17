@@ -1,0 +1,7 @@
+#!/bin/sh
+git status --porcelain \
+  | grep -E '^[ AMR][ AM]' \
+  | grep -E '\.php$' \
+  | sed 's/^[ AMR]*//' \
+  | sed 's/^.* -> //' \
+  | xargs -I '{}' php -l '{}'
