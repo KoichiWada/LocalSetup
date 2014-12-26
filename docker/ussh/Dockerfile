@@ -11,7 +11,7 @@ RUN echo "Asia/Tokyo" > /etc/timezone && dpkg-reconfigure tzdata
 # installation
 RUN apt-get --no-install-recommends install -y \
     openssh-server openssh-client rsyslog \
-    git rsync \
+    git rsync wget \
     && apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* 
 
 ENV DEBIAN_FRONTEND dialog
