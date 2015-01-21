@@ -74,15 +74,24 @@
 (setq-default c-basic-offset 4 tab-width 4 indent-tabs-mode nil)
 
 ;; load-path
-(setq load-path
-      (append
-       (list
-        (expand-file-name "~/.emacs.d/elisp/"))
-       load-path))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install/"))
 
 ;; auto-install
 (require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install")
+;(setq auto-install-directory "~/.emacs.d/auto-install")
+(auto-install-update-emacswiki-package-name t)
+(auto-install-compatibility-setup)
+
+;; package
+(require 'package)
+;; MELPAを追加
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;; Marmaladeを追加
+(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; 初期化
+(package-initialize)
+
 
 ;; php-mode
 (require 'php-mode)
@@ -105,12 +114,3 @@
 
 ;; dart-mode
 ;(require 'dart-mode)
-
-;; package
-(require 'package)
-;; MELPAを追加
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-;; Marmaladeを追加
-(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
-;; 初期化
-(package-initialize)
