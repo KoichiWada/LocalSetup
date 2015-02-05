@@ -6,7 +6,7 @@ fi
 
 if [ $(grep -c GOPATH ~/.bashrc) -eq 0 ]; then
     echo '# go setting' >> ~/.bashrc
-    echo 'GOPATH=~/go' >> ~/.bashrc
+    echo 'export GOPATH=~/go' >> ~/.bashrc
 fi
 
 if [ -z "$(which go)" ]; then
