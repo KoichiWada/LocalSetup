@@ -92,7 +92,6 @@
 ;; 初期化
 (package-initialize)
 
-
 ;; php-mode
 (require 'php-mode)
 ; PEAR規約のインデント設定にする
